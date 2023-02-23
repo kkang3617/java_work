@@ -15,7 +15,7 @@ public class ConditionalOperator {
 		int x = 10, y = 20;
 	
 		String result = (x > y ? "x는 y보다 큽니다." : "x는 y보다 작습니다.");
-		System.out.println(result);
+		System.out.println(result);  //(참)        :      (거짓)
 		
 		//난수를 발생시키는 매서드 Math.random();
 		//0.0이상 1.0미만의 실수 난수값을 반환합니다.

@@ -32,31 +32,31 @@ public class WhileExample2 {
 		
 		//1~30000까지의 정수 중 258의 배수의 개수를 출력.
 		
-		int x = 1;
-		int y = 0;
+		int j = 1;
+		int cnt = 0;        // 약수의 개수를 기억해줄 변수.
 
-		while(x <= 30000) {
-			if(x % 258 == 0) {
-				y++;				
+		while(j <= 30000) {
+			if(j % 258 == 0) {
+				cnt++;				
 			}
-			x++;
+			j++;
 		}
-		System.out.println("258의 배수의 개수: " + y + "개");
+		System.out.println("258의 배수의 개수: " + cnt + "개");
 		
 		//1000의 약수의 개수를 구하세요.
 		//1부터 1000까지 하나씩 올라가면서 1000이랑 나눠보세요.
 		//그랬을 때 나누어 떨어지는 애가 약수입니다.
 		
-		int a = 1;
-		int b = 0;
+		int k = 1;
+		int count = 0;        // 약수의 개수를 기억해줄 변수.
 		
-		while(a <= 1000) {
-			if(1000 % a == 0 ) {
-				b++;
+		while(k <= 1000) {
+			if(1000 % k == 0 ) {
+				count++;
 			}
-			a++;
+			k++;
 		}
-		System.out.println("1000의 약수의 개수: " + b + "개");
+		System.out.println("1000의 약수의 개수: " + count + "개");
 		
 	}		
 	
