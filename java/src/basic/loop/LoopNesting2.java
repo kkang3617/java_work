@@ -23,7 +23,7 @@ public class LoopNesting2 {
 		int count = 0; // 소수의 개수를 세줄 변수.
 
 		System.out.print("소수: ");
-		for(int i=1; i<=num; i++) {   //1부터~00 범위설정
+		for(int i=1; i<=num; i++) {   //1부터~00까지 범위설정
 			int cnt = 0; //소수의 판별을 위해서 약수의 개수를 세줄 변수. for문 한바퀴마다 초기화
                          // 꼭 이자리에 있어야함.			
 			for(int j=1; j<=i; j++) {   //i를 소수판별하기 위한for문
