@@ -28,7 +28,7 @@ public class ArrayInsertQuiz {
 
 		System.out.println("먹고싶은 음식을 입력하세요.");
 		System.out.println("'배불러'를 입력하시면 종료됩니다.");
-		for(int i=0; i<foods.length; i++) {     // 입력횟수
+		outer:for(int i=0; i<foods.length; i++) {     // 입력횟수
 			System.out.print("> ");
 			String food = sc.next();            // 입력값저장
 
@@ -36,14 +36,25 @@ public class ArrayInsertQuiz {
 				System.out.println("입력을 종료합니다.");
 				break;
 			}
+			
+			int j;   //추가문제
+			for(j=0; j<foods.length; j++) {
+				if(food.equals(foods[j])) {
+					System.out.println("이미 존재하는 음식입니다.");
+					i--; // i한번 -해줘야 이번회차 다시 진행할 수 있다
+					continue outer;
+				}
+			}
+			
+			
 
 			foods[i] = food;    // foods 배열에 food입력값 저장
 		}//여기가 for문 닫히는 곳
 		System.out.println("----------------------");
 		System.out.print("내가 먹고싶은 음식들:");
-		for(String food:foods) {   //향상된 for문, 입력된 음식나열.
-			if(food == null)break;
-			System.out.print(food + " ");
+		for(String f:foods) {   //향상된 for문, 입력된 음식나열.
+			if(f == null)break;
+			System.out.print(f + " ");
 		}
 
 
