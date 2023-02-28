@@ -80,7 +80,7 @@ public class EmployeeManager {
 				System.out.println("-----------------------");
 				System.out.print("*모든 사원 정보*\n");
 				for(String s:userNums) {
-					if(s == null) {    // null값이ㄴ 나오면 멈춰라, 앞에 것만 보여줘라
+					if (s == null) {    // null값이 나오면 멈춰라, 앞에 것만 보여줘라
 						System.out.println("등록된 사원정보가 없습니다.");
 						break;
 					}
@@ -90,7 +90,7 @@ public class EmployeeManager {
 				
 			} else if(menu == 3) {
 				//입력한 사번에 일치하는 사원의 4가지 정보를 모두 출력하세요.
-				//입력한 사번이 존재하지 않는다면 "조회하신 사원의 정보가 없습니다." 를 출력.
+				//입력한 사번이 존재하지 않는다면 "조회하신 사원의.2 정보가 없습니다." 를 출력.
 
 			} else if(menu == 4) {
 				//해당 사번과 일치하는 사원의 나이와 부서를 선택적으로 변경할 수 있도록
