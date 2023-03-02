@@ -25,19 +25,27 @@ package basic.method;
 public class MethodExample1 {
 	
 	//메서드의 선언! (static은 뒤에서 알려줌. 지금은 없다고 생각하기)
-	static int clacTotal(int x) {
+	static int calcTotal(int x) {
 		int total = 0;
 		for (int i=1; i<=x; i++) {
 			total += i;
 		}
-		return total;
+		return total;  //어떤 값을 리턴받을지 작성
 	}
 	
 
 	public static void main(String[] args) {
 		
+		int total = calcTotal(10); // int total = 55;
+		System.out.println(total);
 		
-		
+		System.out.println("1~100까지의 누적합: " + calcTotal(100));
+		System.out.println("1~200까지의 누적합: " + calcTotal(200));
+		System.out.println("1~300까지의 누적합: " + calcTotal(300));
+		System.out.println("1~400까지의 누적합: " + calcTotal(400));
+		System.out.println("1~500까지의 누적합: " + calcTotal(500));
+		System.out.println("1~600까지의 누적합: " + calcTotal(600));
+		System.out.println("1~700까지의 누적합: " + calcTotal(700));
 		
 		
 		
