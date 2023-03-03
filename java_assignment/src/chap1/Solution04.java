@@ -17,29 +17,43 @@ public class Solution04 {
 		 출석번호에 중복은 없습니다.
 		 입력되는 값을 제시합니다. 
 		 -> 3 1 4 5 7 9 6 10
-	
+
 		 출력:
 		 ex) 
 		 숙제를 안 낸 학생의 번호:
 	 	 2
 		 8
-	
+
 		 의 형태로 출력합니다. 
 		 */
 		Scanner sc = new Scanner(System.in);
 		int[] stu = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-		int[] nums = new int[8];
-		
-		System.out.print("8개의 정수를 입력하세요");
-		for(int i=0; i<nums.length; i++) {
-			nums[i] = sc.nextInt();
+		int[] compStu = new int[8];
+
+		System.out.print("제출한 학생번호를 입력하세요: ");
+		for(int i=0; i<compStu.length; i++) {
+			compStu[i] = sc.nextInt();
 		}
-		System.out.println(Arrays.toString(nums));
+		System.out.println(Arrays.toString(compStu));
 		
-		
-		
-		
-		
+		System.out.println("숙제를 안낸 학생의 번호:");
+		for(int i=0; i<stu.length; i++) {
+			boolean flag = false; //boolean 초기값 false
+			for(int j=0; j<compStu.length; j++) {
+				if(stu[i] == compStu[j]) {
+
+					flag = true;  // 입력한 compStu랑 stu 같으면 flag를
+								  // true로 저장.
+				}
+
+			}
+			if(!flag) {  //flag = false면 아래출력
+				System.out.println(stu[i]);
+			}
+		}
+
+
+
 	}
 
 }
