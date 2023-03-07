@@ -10,6 +10,7 @@ public class Warrior extends Player {
 		//부모의 속성과 기능이 실존하게 되고, 물려줄 수가 있기 때문.
 		super(name); // 부모의 기본,2번 생성자에서 이름을 받겠다. 
 		             //this.name = name;
+		//헷갈리면 super에 커서 올려놓고 f3눌러주면 객체확인가능
 		this.rage = 60;
 	}
 	

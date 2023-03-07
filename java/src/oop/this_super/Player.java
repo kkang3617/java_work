@@ -8,7 +8,7 @@ public class Player {
 	int hp;
 	
 	/*
-	 # this
+	 # this  (그 객체~)
 	 
 	 - this란? 자기 자신 객체를 가리키는 키워드이다.
 	 - 생성자 또는 메서등 내에서 this를 사용하면 this는
@@ -40,7 +40,7 @@ public class Player {
 		this(name); // 다른생성자한테 넘김(2번한테)
 		// 다른 생성자의 호출은 생성자 내에서 최상단에 위치해야 한다.
 		System.out.println("Player의 3번 생성자 호출");
-		this.name = name;
+		this.name = name; //얘는 없어도 되는듯. 위의 this에서 이름불러와서.
 		this.hp = hp;
 		
 	}
