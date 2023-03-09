@@ -13,20 +13,20 @@ public abstract class Shape {
 	     4. 도형 이름을 출력할 수 있는 메서드 getName()을 선언. (강제 x)
 	     */
 		
-		private String name;
+		private String name; //1번 프라이빗 선언하면 getter,setter부터 작성.
 
-		public abstract double getArea(); // 넓이 로직
+		public abstract double getArea(); // 3번, 넓이 로직 
 		
-		public Shape(String name) {
+		public Shape(String name) {  //2번 
 		super();
 		this.name = name;
 	}
 
-		public String getName() {
+		public String getName() {    //getter
 			return name;
 		}
 
-		public void setName(String name) {
+		public void setName(String name) { //setter
 			this.name = name;
 		}
 

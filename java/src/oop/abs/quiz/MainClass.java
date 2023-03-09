@@ -22,8 +22,10 @@ public class MainClass {
 		Shape rect = new Rect("5", 5);
 		
 		//double이라 float로 받아야됨.
-		System.out.printf("반지름이 %s인 원의 넓이: %.0f\n", rect.getName() , rect.getArea());
-		System.out.printf("길이가 %s인 원의 넓이: %.1f", circle.getName() , circle.getArea());
+		System.out.printf("반지름이 %s인 원의 넓이: %.0f\n", 
+				           rect.getName() , rect.getArea());
+		System.out.printf("길이가 %s인 원의 넓이: %.1f", 
+				           circle.getName() , circle.getArea());
 	}
 
 }
