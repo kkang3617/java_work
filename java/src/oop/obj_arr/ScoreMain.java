@@ -23,31 +23,39 @@ public class ScoreMain {
         */
 		
 		Scanner sc = new Scanner(System.in);
-		Score[] s = new Score[100];
+		Score[] scores = new Score[100];
 		
-		for(int i=1; i<s.length; i++) {
+		
+		for(int i=1; i<scores.length; i++) {
+			Score user = new Score();
 			System.out.print("이름입력: ");
 			String name = sc.next();
-			System.out.print("국어점수입력: ");
-			int kor = sc.nextInt();
-			System.out.print("영어점수입력: ");
-			int eng = sc.nextInt();
-			System.out.print("수학점수입력: ");
-			int math = sc.nextInt();
-			
-			s[i] = new Score(name, kor, eng, math); 
-			
+			user.setName(name);
 			if(name.equals("그만")) {
 				System.out.println("입력을 종료합니다.");
 				break;
 			}
+			System.out.print("국어점수입력: ");
+			int kor = sc.nextInt();
+			user.setKor(kor);
+			System.out.print("영어점수입력: ");
+			int eng = sc.nextInt();
+			user.setEng(eng);
+			System.out.print("수학점수입력: ");
+			int math = sc.nextInt();
+			user.setMath(math);
+			int total = kor + eng + math;
+			double avg = total / 3.0;
 			
+			scores[i] = user; 
 			
+			}
+			for(Score s : scores) {
+				if(s == null) break;
+				s.scoreInfo();
+			}
 			
-		}
-		
-		
-		
+			sc.close();
 		
 		
 		

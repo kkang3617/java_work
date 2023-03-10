@@ -17,8 +17,9 @@ public class Score {
 	private int eng;
 	private int math;
 	private int total;
-	private double aver;
+	private double avg;
 	
+
 	public String getName() {
 		return name;
 	}
@@ -59,16 +60,17 @@ public class Score {
 		this.total = total;
 	}
 
-	public double getAver() {
-		return aver;
+	public double getAvg() {
+		return avg;
 	}
 
-	public void setAver(double aver) {
-		this.aver = aver;
+	public void setAvg(double avg) {
+		this.avg = avg;
 	}
 
 	void scoreInfo() {
-		System.out.printf("이름: %s, 국어: %d, 영어: %d, 수학: %d, 총점: %d, 평균: %f");
+		System.out.printf("이름: %s, 국어: %d, 영어: %d, 수학: %d, 총점: %d, 평균: %f",
+				          name, kor, eng, math, total, avg);
 	}
 	
 	
