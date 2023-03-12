@@ -1,4 +1,4 @@
-package etc.api.lang.wrapper;
+/*package etc.api.lang.wrapper;
 
 import java.util.Scanner;
 
@@ -24,7 +24,7 @@ public class ParseQuiz {
 			}
 			
 		}
-		
+		/*
 		switch(num.charAt(7)) {
 			case '1': case '3':
 				System.out.pri);
@@ -33,4 +33,4 @@ public class ParseQuiz {
 		
 	}
 
-}
+}*/
