@@ -35,17 +35,17 @@ public class LottoSimulator {
 		return list;
 	}
 	//보너스 번호를 생성하는 메서드
-	public static int createBonusNum(???) {
+	public static int createBonusNum(List<Integer> list) {
 			/*
 			 - 매개값으로 전달되는 당첨 번호 집합을 전달받으신 후
 			   당첨번호들을 피해서 보너스번호 하나만 뽑아주세요.
 			   범위는 마찬가지로 1 ~ 45 사이의 난수입니다.
 			 */
-
+		int num = r.nextInt(45) + 1;
 		while(true) {
-			if(!List) {
-
-			}	
+			if(!list.contains(num)) {
+				return num;
+			}
 		}
 
 	}
@@ -53,9 +53,10 @@ public class LottoSimulator {
 		
 		
 	// 당첨 등수를 알려주는 메서드
-	public static void checkLottoNumber(???, ???, ???) {
+	public static void checkLottoNumber() {
 		/*
 		 매개값으로 당첨번호집합, 구매한 로또 번호집합, 보너스번호를 받는다.
+		          prize               bonus
 		 내 로또 번호와 당첨번호를 비교하여 
 		 일치하는 횟수를 세 준 후 등수를 판단하세요. 
 		 판단된 등수에 해당하는 static 변수의 값을 욜려주면 됩ㄴ디ㅏ.
@@ -66,11 +67,19 @@ public class LottoSimulator {
 		 3개일치 -> 5등
 		 나머지 -> 꽝
 		 */
+		
+		for(int i=0; i<prize.size(); i++) {
+			for(int j=0;;)
+			
+		}
+		
+		
 	}
 	
 	public static void main(String[] args) {
 
 		//로또 번호 생성 메서드를 호출해서 당첨 번호를 하나 고정시키세요.
+		List<Integer> prize = createLotto();
 		
 		//보너스번호도 하나 고정시키세요.
 		
