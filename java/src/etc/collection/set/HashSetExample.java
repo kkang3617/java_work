@@ -52,7 +52,7 @@ public class HashSetExample {
 		 next()를 요소의 개수보다 많이 호출하게 되면
 		 NoSuchElement 예외가 발생한다.
 		 
-		 hashNext() -> 반복자가 가지고 있는 객체를 더 가지고 올 수 있는지의
+		 hasNext() -> 반복자가 가지고 있는 객체를 더 가지고 올 수 있는지의
 		 여부를 확인하는 메서드를 통해 next()를 호출해야 한다.
 		 */
 		
