@@ -16,7 +16,7 @@ public class Car {
 		System.out.println("시동버튼을 눌렀습니다.");
 		this.injectGasoline();
 		this.injectOil();
-		start = true; //시동on
+		this.start = true; //시동on
 		this.moveCylinder();
 		System.out.println("시동이 걸렸습니다");
 	}
@@ -77,10 +77,32 @@ public class Car {
 				System.out.printf("속도: %d", speed);
 				break;
 			default:
-				mode = 'P';
+				
 				System.out.println("D나 R모드가 아니라면 속도를 지정할 수 없습니다.");
 		}
 	}
+	
+	/*public void setSpeed(int speed) {
+		if(speed < 0 || speed > 200) {
+			System.out.println("잘못된 속도 입니다.");
+			return;
+		}
+		if(!start) {
+			System.out.println("시동부터 먼저 거세요~");
+			return;
+		}
+		if(mode == 'D' || mode == 'R') {
+			if(mode == 'R' && speed > 40) {
+				System.out.println("후진은 40이상 가속할 수 없습니다.");
+				return;
+			}
+			this.speed = speed;
+		} else {
+			System.out.println("변속기 위치를 확인하세요.");
+			return;
+		}
+		
+	}*/
 
 	public char getMode() {
 		return mode;
@@ -92,6 +114,7 @@ public class Car {
 			this.mode = mode;
 			break;
 		default :
+			this.mode = 'P';
 			System.out.println("P,R,N,D 중 하나 선택하세요");
 		}
 	}
