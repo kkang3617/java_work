@@ -11,22 +11,23 @@ public class MyCart {
 		this.money = money;
 	}
 	
-	
-	
-	
-	
-	
-   /*
+	/*
     - public void buy(모든 상품을 전달할 수 있는 매개변수)
     
-    - 가진 돈과 전달된 물건의 가격을 비교해서 돈이 적으면 "금액부족"
+    - 가진 돈(money) 과 전달된 물건(p.price)의 가격을 비교해서 돈이 적으면 "금액부족"
      출력후 메서드 강제 종료(return).
     - 가진 돈이 충분하면 물건의 가격을 money에서 빼고 
       add(상품)메서드 호출.
     */
-	
-
-	
+	public void buy(Product p) {
+		if(money < p.price ) {
+			System.out.println("금액부족");
+			return;
+		} else {
+			money -= p.price;
+		}
+		add(p);
+	}
 	/*
     - private void add(모든 상품을 받을 수 있도록 선언)
     
@@ -40,9 +41,21 @@ public class MyCart {
 
     - 모든 로직이 완료되면 info() 메서드를 호출합니다.
     */
-	
-	
-	
+	private void add(Product p) {
+		if(i >= cart.length) {
+			Product[] newCart = new Product[cart.length * 2];
+
+			for(int j=0; j<cart.length; j++) {
+				newCart[j] = cart[j];	
+			}
+			cart = newCart; //새로운 장바구니의 주소값을 기존의 장바구니와 바꿉니다.
+			newCart = null;
+		}
+		cart[i] = p; //매개변수로 전달된 상품을 장바구니에 담는다.
+		i++;         //상품이 추가될 때 마다 i의 값을 하나씩 올린다.
+
+		info();
+	}
 	
 	/*
     - public void info()
@@ -53,7 +66,18 @@ public class MyCart {
     
     - MyCart 선언이 완료되었다면 MainClass에서 buy메서드를 호출해 봅니다.
     */
-	
+	public void info() {
+		int sum = 0;
+		for(Product p : cart) { //장바구니 안에 담긴 물건의 목록(name)을 출력합니다.
+			if(p==null) break;
+			System.out.print(p.name + " ");
+			sum += p.price;
+		}
+		System.out.println();
+		System.out.println("구매금액합계: " + sum);
+		System.out.println("남은금액: " + money);
+		
+	}
 
 	
 

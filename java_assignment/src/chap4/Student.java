@@ -36,6 +36,19 @@ public class Student {
 		예외처리를 해서, 다시 점수를 입력받을 수 있는
 		무한 루프를 구성해 주세요.
 		*/	
+		while(true) {
+			try {
+				System.out.print("국어점수 입력: ");
+				this.kor = sc.nextInt();
+				System.out.print("영어점수 입력: ");
+				this.eng = sc.nextInt();
+				System.out.print("수학점수 입력: ");
+				this.math = sc.nextInt();
+
+			} catch (Exception e) {
+				System.out.println("숫자로 다시 입력하세요.");
+			}
+		}
 	}
 
 	//총점, 평균, 학점을 계산하는 메서드

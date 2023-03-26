@@ -41,6 +41,8 @@ public class Point {
 		 4. 저장 완료 메세지를 호출하세요.
 		 ex) XXX님의 성적 정보가 정상적으로 입력되었습니다.
 		 */
+		Student stu = new Student();
+		
 		
 	}
 
