@@ -44,9 +44,10 @@ public class Student {
 				this.eng = sc.nextInt();
 				System.out.print("수학점수 입력: ");
 				this.math = sc.nextInt();
-
+				break;
 			} catch (Exception e) {
 				System.out.println("숫자로 다시 입력하세요.");
+				sc.nextLine(); // 없으면 무한루프
 			}
 		}
 	}
